@@ -1,0 +1,14 @@
+{
+  "version": "2018-05-29",
+  "operation": "Query",
+  "query" : {
+        "expression" : "#uuid = :id",
+        "expressionNames" : {
+            "#uuid" : "uuid"
+        },
+        "expressionValues" : {
+            ":id" : {"S": "11617"}
+        }
+    },
+  "limit": 100
+}

@@ -1,0 +1,16 @@
+type Todo @model {
+  id: ID!
+  name: String!
+  description: String
+}
+
+type Recipe {
+  uuid: ID!
+  NAME: String!
+  ACTIVE: String!
+}
+
+type Query {
+  getRecipes: [Recipe]
+}
+
