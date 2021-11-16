@@ -1,7 +1,7 @@
 /* src/App.js */
 import React, { useEffect, useState } from 'react';
 import Amplify, { API, graphqlOperation, Storage } from 'aws-amplify';
-import { DataStore } from '@aws-amplify/datastore';
+import { DataStore } from 'aws-amplify';
 import { Todo2 } from './models';
 import { createTodo } from './graphql/mutations';
 import { listTodos } from './graphql/queries';
@@ -18,8 +18,17 @@ const App = () => {
 
   useEffect(() => {
       fetchTodos();
-      fetchTodos2();
   }, []);
+
+    useEffect(() => {
+      fetchTodos2();
+        const subscription = DataStore.observe(Todo2).subscribe(() =>
+            fetchTodos2()
+        );
+        return () => subscription.unsubscribe();
+        //eslint-disable-next-line
+    }, []);
+
 
   function setInput2(key, value) {
       setFormState2({ ...formState, [key]: value });
@@ -33,7 +42,7 @@ const App = () => {
         try {
             const todoData = await DataStore.query(Todo2);
             setTodos2(todoData);
-        } catch (err) { console.log('error fetching todos2'); }
+        } catch (err) { console.log('error fetching todos2: ', err); }
   }
 
   async function fetchTodos() {
