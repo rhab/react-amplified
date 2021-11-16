@@ -2,24 +2,38 @@
 import React, { useEffect, useState } from 'react';
 import Amplify, { API, graphqlOperation, Storage } from 'aws-amplify';
 import { DataStore } from '@aws-amplify/datastore';
+import { Todo2 } from './models';
 import { createTodo } from './graphql/mutations';
 import { listTodos } from './graphql/queries';
 import { withAuthenticator } from '@aws-amplify/ui-react';
-import awsExports from "./aws-exports";
-Amplify.configure(awsExports);
 
 const initialState = { name: '', description: '' };
+const initialState2 = { nombre: '', description: '' };
 
 const App = () => {
   const [formState, setFormState] = useState(initialState);
+    const [formState2, setFormState2] = useState(initialState2);
     const [todos, setTodos] = useState([]);
+    const [todos2, setTodos2] = useState([]);
 
   useEffect(() => {
       fetchTodos();
+      fetchTodos2();
   }, []);
+
+  function setInput2(key, value) {
+      setFormState2({ ...formState, [key]: value });
+  }
 
   function setInput(key, value) {
       setFormState({ ...formState, [key]: value });
+  }
+
+  async function fetchTodos2() {
+        try {
+            const todoData = await DataStore.query(Todo2);
+            setTodos2(todoData);
+        } catch (err) { console.log('error fetching todos2'); }
   }
 
   async function fetchTodos() {
@@ -28,6 +42,18 @@ const App = () => {
         const todos = todoData.data.listTodos.items;
         setTodos(todos);
     } catch (err) { console.log('error fetching todos'); }
+  }
+
+  async function addTodo2() {
+    try {
+        if (!formState2.nombre) return;
+        const todo2 = { ...formState2 };
+        setTodos2([...todos2, todo2]);
+        setFormState2(initialState2);
+        await DataStore.save(new Todo2({...formState2}));
+    } catch (err) {
+        console.log('error creating todo:', err);
+    }
   }
 
   async function addTodo() {
@@ -42,14 +68,41 @@ const App = () => {
     }
   }
 
-  return (
+    return (
+
+ <>
     <div style={styles.container}>
-      <h2>Amplify Todos</h2>
+        <h2>Amplify Todos</h2>
+            <input
+                onChange={event => setInput('name', event.target.value)}
+                style={styles.input}
+                value={formState.name}
+                placeholder="Name"
+            />
+            <input
+                onChange={event => setInput('description', event.target.value)}
+                style={styles.input}
+                value={formState.description}
+                placeholder="Description"
+            />
+        <button style={styles.button} onClick={addTodo}>Create Todo</button>
+        {
+            todos.map((todo, index) => (
+                    <div key={todo.id ? todo.id : index} style={styles.todo}>
+                    <p style={styles.todoName}>{todo.name}</p>
+                    <p style={styles.todoDescription}>{todo.description}</p>
+                    </div>
+            ))
+        }
+    </div>
+
+    <div style={styles.container}>
+      <h2>Amplify Todos 2222 Datastore</h2>
       <input
-        onChange={event => setInput('name', event.target.value)}
+        onChange={event => setInput2('nombre', event.target.value)}
         style={styles.input}
         value={formState.name}
-        placeholder="Name"
+        placeholder="Nombre"
       />
       <input
         onChange={event => setInput('description', event.target.value)}
@@ -57,16 +110,16 @@ const App = () => {
         value={formState.description}
         placeholder="Description"
       />
-      <button style={styles.button} onClick={addTodo}>Create Todo</button>
+      <button style={styles.button} onClick={addTodo2}>Create Todo</button>
       {
-        todos.map((todo, index) => (
-          <div key={todo.id ? todo.id : index} style={styles.todo}>
-            <p style={styles.todoName}>{todo.name}</p>
-            <p style={styles.todoDescription}>{todo.description}</p>
+        todos.map((todo2, index) => (
+          <div key={todo2.id ? todo2.id : index} style={styles.todo}>
+            <p style={styles.todoName}>{todo2.nombre}</p>
           </div>
         ))
       }
-    </div>
+        </div>
+    </>
   )
 }
 
