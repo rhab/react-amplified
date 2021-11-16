@@ -10,6 +10,67 @@ export const getRecipes = /* GraphQL */ `
     }
   }
 `;
+export const syncTodo2s = /* GraphQL */ `
+  query SyncTodo2s(
+    $filter: ModelTodo2FilterInput
+    $limit: Int
+    $nextToken: String
+    $lastSync: AWSTimestamp
+  ) {
+    syncTodo2s(
+      filter: $filter
+      limit: $limit
+      nextToken: $nextToken
+      lastSync: $lastSync
+    ) {
+      items {
+        id
+        nombre
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
+export const getTodo2 = /* GraphQL */ `
+  query GetTodo2($id: ID!) {
+    getTodo2(id: $id) {
+      id
+      nombre
+      _version
+      _deleted
+      _lastChangedAt
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const listTodo2s = /* GraphQL */ `
+  query ListTodo2s(
+    $filter: ModelTodo2FilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listTodo2s(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        nombre
+        _version
+        _deleted
+        _lastChangedAt
+        createdAt
+        updatedAt
+      }
+      nextToken
+      startedAt
+    }
+  }
+`;
 export const syncTodos = /* GraphQL */ `
   query SyncTodos(
     $filter: ModelTodoFilterInput

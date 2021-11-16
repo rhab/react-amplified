@@ -1,5 +1,48 @@
 export const schema = {
     "models": {
+        "Todo2": {
+            "name": "Todo2",
+            "fields": {
+                "id": {
+                    "name": "id",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "nombre": {
+                    "name": "nombre",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": true,
+                    "attributes": []
+                },
+                "createdAt": {
+                    "name": "createdAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                },
+                "updatedAt": {
+                    "name": "updatedAt",
+                    "isArray": false,
+                    "type": "AWSDateTime",
+                    "isRequired": false,
+                    "attributes": [],
+                    "isReadOnly": true
+                }
+            },
+            "syncable": true,
+            "pluralName": "Todo2s",
+            "attributes": [
+                {
+                    "type": "model",
+                    "properties": {}
+                }
+            ]
+        },
         "Todo": {
             "name": "Todo",
             "fields": {
@@ -80,5 +123,5 @@ export const schema = {
             }
         }
     },
-    "version": "b549b9aa20d98ecb5d45bd44a89a3e46"
+    "version": "927a14397bae56c7e23e1e8a1761ab89"
 };

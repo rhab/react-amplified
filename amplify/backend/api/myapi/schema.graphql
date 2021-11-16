@@ -1,3 +1,8 @@
+type Todo2 @model {
+  id: ID!
+  nombre: String!
+}
+
 type Todo @model {
   id: ID!
   name: String!
