@@ -101,7 +101,7 @@ const App = () => {
       <input
         onChange={event => setInput2('nombre', event.target.value)}
         style={styles.input}
-        value={formState.name}
+        value={formState2.nombre}
         placeholder="Nombre"
       />
       <input
