@@ -41,6 +41,7 @@ const App = () => {
   async function fetchTodos2() {
         try {
             const todoData = await DataStore.query(Todo2);
+            console.log('todo2: ', todoData);
             setTodos2(todoData);
         } catch (err) { console.log('error fetching todos2: ', err); }
   }
