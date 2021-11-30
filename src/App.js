@@ -122,7 +122,7 @@ const App = () => {
       />
       <button style={styles.button} onClick={addTodo2}>Create Todo</button>
       {
-        todos.map((todo2, index) => (
+        todos2.map((todo2, index) => (
           <div key={todo2.id ? todo2.id : index} style={styles.todo}>
             <p style={styles.todoName}>{todo2.nombre}</p>
           </div>
