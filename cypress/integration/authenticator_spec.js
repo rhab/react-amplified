@@ -19,7 +19,7 @@ describe('Authenticator:', function() {
 });
 export const selectors = {
     // Auth component classes
-    usernameInput: '[data-test="username-input"]',
+    usernameInput: '[data-test="sign-in-username-input"]',
     signInPasswordInput: '[data-test="sign-in-password-input"]',
     signInSignInButton: '[data-test="sign-in-sign-in-button"]',
     signOutButton: '[data-test=""]'
