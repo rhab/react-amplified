@@ -19,7 +19,7 @@ describe('Authenticator:', function() {
 });
 export const selectors = {
     // Auth component classes
-    usernameInput: 'input.input',
+    usernameInput: 'amplify-auth-container.hydrated > .hydrated',
     signInPasswordInput: '#password',
     signInSignInButton: '.button',
     signOutButton: '[data-test=""]'
