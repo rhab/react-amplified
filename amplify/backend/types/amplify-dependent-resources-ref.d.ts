@@ -1,12 +1,13 @@
 export type AmplifyDependentResourcesAttributes = {
     "api": {
-        "myapi": {
+        "rhabtest1": {
+            "GraphQLAPIKeyOutput": "string",
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
         }
     },
     "auth": {
-        "reactamplifiede3bb53c5": {
+        "rhabtest110f54ed6": {
             "IdentityPoolId": "string",
             "IdentityPoolName": "string",
             "UserPoolId": "string",
@@ -14,20 +15,6 @@ export type AmplifyDependentResourcesAttributes = {
             "UserPoolName": "string",
             "AppClientIDWeb": "string",
             "AppClientID": "string"
-        }
-    },
-    "function": {
-        "S3Triggeraf2bac3a": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        }
-    },
-    "storage": {
-        "s3testrhab": {
-            "BucketName": "string",
-            "Region": "string"
         }
     }
 }

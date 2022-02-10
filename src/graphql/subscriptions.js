@@ -1,42 +1,48 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateTodo2 = /* GraphQL */ `
-  subscription OnCreateTodo2 {
-    onCreateTodo2 {
+export const onCreateMsg = /* GraphQL */ `
+  subscription OnCreateMsg {
+    onCreateMsg {
       id
-      nombre
+      name
+      description
+      time
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
-export const onUpdateTodo2 = /* GraphQL */ `
-  subscription OnUpdateTodo2 {
-    onUpdateTodo2 {
+export const onUpdateMsg = /* GraphQL */ `
+  subscription OnUpdateMsg {
+    onUpdateMsg {
       id
-      nombre
+      name
+      description
+      time
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
-export const onDeleteTodo2 = /* GraphQL */ `
-  subscription OnDeleteTodo2 {
-    onDeleteTodo2 {
+export const onDeleteMsg = /* GraphQL */ `
+  subscription OnDeleteMsg {
+    onDeleteMsg {
       id
-      nombre
+      name
+      description
+      time
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -46,11 +52,11 @@ export const onCreateTodo = /* GraphQL */ `
       id
       name
       description
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -60,11 +66,11 @@ export const onUpdateTodo = /* GraphQL */ `
       id
       name
       description
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -74,11 +80,11 @@ export const onDeleteTodo = /* GraphQL */ `
       id
       name
       description
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;

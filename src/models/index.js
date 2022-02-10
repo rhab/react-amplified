@@ -4,10 +4,9 @@ import { schema } from './schema';
 
 
 
-const { Todo2, Todo, Recipe } = initSchema(schema);
+const { Todo, Msg } = initSchema(schema);
 
 export {
-  Todo2,
   Todo,
-  Recipe
+  Msg
 };

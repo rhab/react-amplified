@@ -1,40 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-reactamplified-dev-94317-authRole",
-      "UnauthRoleArn": "arn:aws:iam::980106333257:role/amplify-reactamplified-dev-94317-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::980106333257:role/amplify-reactamplified-dev-94317-authRole",
+      "AuthRoleName": "amplify-rhabtest1-dev-142753-authRole",
+      "UnauthRoleArn": "arn:aws:iam::980106333257:role/amplify-rhabtest1-dev-142753-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::980106333257:role/amplify-rhabtest1-dev-142753-authRole",
       "Region": "us-east-1",
-      "DeploymentBucketName": "amplify-reactamplified-dev-94317-deployment",
-      "UnauthRoleName": "amplify-reactamplified-dev-94317-unauthRole",
-      "StackName": "amplify-reactamplified-dev-94317",
-      "StackId": "arn:aws:cloudformation:us-east-1:980106333257:stack/amplify-reactamplified-dev-94317/643382c0-3cb4-11ec-af14-0a93bab7da43",
-      "AmplifyAppId": "d3kejg8fl1eq94"
+      "DeploymentBucketName": "amplify-rhabtest1-dev-142753-deployment",
+      "UnauthRoleName": "amplify-rhabtest1-dev-142753-unauthRole",
+      "StackName": "amplify-rhabtest1-dev-142753",
+      "StackId": "arn:aws:cloudformation:us-east-1:980106333257:stack/amplify-rhabtest1-dev-142753/38014a90-8915-11ec-bc1c-12c52bac6db9",
+      "AmplifyAppId": "dxs7bhdzeb4rk"
     },
     "categories": {
       "auth": {
-        "reactamplifiede3bb53c5": {}
-      },
-      "function": {
-        "S3Triggeraf2bac3a": {
-          "deploymentBucketName": "amplify-reactamplified-dev-94317-deployment",
-          "s3Key": "amplify-builds/S3Triggeraf2bac3a-6e67536d754a65776438-build.zip"
-        }
-      },
-      "hosting": {
-        "amplifyhosting": {
-          "appId": "d3kejg8fl1eq94",
-          "type": "manual"
-        }
-      },
-      "storage": {
-        "Recipe": {
-          "tableName": "Recipe",
-          "region": "us-east-1",
-          "arn": "arn:aws:dynamodb:us-east-1:980106333257:table/Recipe",
-          "partitionKeyName": "uuid",
-          "partitionKeyType": "S"
-        }
+        "rhabtest110f54ed6": {}
       }
     }
   }

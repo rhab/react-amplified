@@ -1,51 +1,57 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createTodo2 = /* GraphQL */ `
-  mutation CreateTodo2(
-    $input: CreateTodo2Input!
-    $condition: ModelTodo2ConditionInput
+export const createMsg = /* GraphQL */ `
+  mutation CreateMsg(
+    $input: CreateMsgInput!
+    $condition: ModelMsgConditionInput
   ) {
-    createTodo2(input: $input, condition: $condition) {
+    createMsg(input: $input, condition: $condition) {
       id
-      nombre
+      name
+      description
+      time
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
-export const updateTodo2 = /* GraphQL */ `
-  mutation UpdateTodo2(
-    $input: UpdateTodo2Input!
-    $condition: ModelTodo2ConditionInput
+export const updateMsg = /* GraphQL */ `
+  mutation UpdateMsg(
+    $input: UpdateMsgInput!
+    $condition: ModelMsgConditionInput
   ) {
-    updateTodo2(input: $input, condition: $condition) {
+    updateMsg(input: $input, condition: $condition) {
       id
-      nombre
+      name
+      description
+      time
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
-export const deleteTodo2 = /* GraphQL */ `
-  mutation DeleteTodo2(
-    $input: DeleteTodo2Input!
-    $condition: ModelTodo2ConditionInput
+export const deleteMsg = /* GraphQL */ `
+  mutation DeleteMsg(
+    $input: DeleteMsgInput!
+    $condition: ModelMsgConditionInput
   ) {
-    deleteTodo2(input: $input, condition: $condition) {
+    deleteMsg(input: $input, condition: $condition) {
       id
-      nombre
+      name
+      description
+      time
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -58,11 +64,11 @@ export const createTodo = /* GraphQL */ `
       id
       name
       description
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -75,11 +81,11 @@ export const updateTodo = /* GraphQL */ `
       id
       name
       description
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
@@ -92,11 +98,11 @@ export const deleteTodo = /* GraphQL */ `
       id
       name
       description
+      createdAt
+      updatedAt
       _version
       _deleted
       _lastChangedAt
-      createdAt
-      updatedAt
     }
   }
 `;
