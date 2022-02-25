@@ -12,6 +12,7 @@ export { default as CardA } from "./CardA";
 export { default as ProfileA } from "./ProfileA";
 export { default as EditProfile } from "./EditProfile";
 export { default as CardE } from "./CardE";
+export { default as CardACollection } from "./CardACollection";
 export { default as Features2x3 } from "./Features2x3";
 export { default as CardG } from "./CardG";
 export { default as FeaturesText2x2 } from "./FeaturesText2x2";

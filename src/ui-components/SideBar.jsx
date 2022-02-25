@@ -8,6 +8,7 @@
 import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import {
+  Button,
   Divider,
   Flex,
   IconHome,
@@ -68,7 +69,7 @@ export default function SideBar(props) {
             gap="16px"
             direction="column"
             shrink="0"
-            width="140px"
+            width="175px"
             position="relative"
             padding="0px 0px 0px 0px"
             {...getOverrideProps(overrides, "Flex.Flex[0].Flex[0].Flex[0]")}
@@ -77,7 +78,7 @@ export default function SideBar(props) {
               fontFamily="Inter"
               fontSize="16px"
               fontWeight="700"
-              color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
+              color="rgba(4.000000236555934,125.00000014901161,149.00000631809235,1)"
               lineHeight="20px"
               textAlign="left"
               display="flex"
@@ -136,7 +137,7 @@ export default function SideBar(props) {
                 position="relative"
                 padding="0px 0px 0px 0px"
                 title="Listado"
-                children={rh1?.name}
+                children={rh1?.description}
                 {...getOverrideProps(
                   overrides,
                   "Flex.Flex[0].Flex[0].Flex[0].Flex[0].Text[0]"
@@ -148,7 +149,7 @@ export default function SideBar(props) {
               direction="row"
               alignItems="center"
               shrink="0"
-              width="140px"
+              width="175px"
               position="relative"
               padding="0px 0px 0px 0px"
               {...getOverrideProps(
@@ -171,26 +172,21 @@ export default function SideBar(props) {
                   "Flex.Flex[0].Flex[0].Flex[0].Flex[1].IconHome[0]"
                 )}
               ></IconHome>
-              <Text
-                fontFamily="Inter"
-                fontSize="16px"
-                fontWeight="400"
-                color="rgba(13.000000175088644,26.000000350177288,38.0000015348196,1)"
-                lineHeight="24px"
-                textAlign="left"
+              <Button
+                gap="0"
+                padding="8px 12px 8px 12px"
                 display="flex"
-                direction="column"
-                justifyContent="flex-start"
-                letterSpacing="0.010000000000000009px"
                 shrink="0"
-                position="relative"
-                padding="0px 0px 0px 0px"
-                children="Lorem Ipsum"
+                height="34px"
+                opacity="0.30000001192092896"
+                size="small"
+                variation="primary"
+                children="Primary Button"
                 {...getOverrideProps(
                   overrides,
-                  "Flex.Flex[0].Flex[0].Flex[0].Flex[1].Text[0]"
+                  "Flex.Flex[0].Flex[0].Flex[0].Flex[1].Button[0]"
                 )}
-              ></Text>
+              ></Button>
             </Flex>
           </Flex>
           <Flex

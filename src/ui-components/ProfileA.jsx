@@ -55,7 +55,6 @@ export default function ProfileA(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
-          children="Melinda Marcus"
           {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
         ></Text>
         <Text
@@ -112,7 +111,6 @@ export default function ProfileA(props) {
           shrink="0"
           position="relative"
           padding="0px 0px 0px 0px"
-          children="99 Followers"
           {...getOverrideProps(overrides, "Flex.Flex[1].Text[0]")}
         ></Text>
       </Flex>

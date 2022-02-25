@@ -6,7 +6,7 @@ import Amplify, { API, graphqlOperation, Storage } from 'aws-amplify';
 import { createTodo } from './graphql/mutations';
 import { listTodos } from './graphql/queries';
 import { withAuthenticator } from '@aws-amplify/ui-react';
-import { SideBar } from './ui-components';
+import { SideBar, CardACollection } from './ui-components';
 
 const initialState = { name: '', description: '' };
 const initialState2 = { name: '', desc: '' };
@@ -67,6 +67,10 @@ const App = () => {
   //   }
   // }
 
+    async function test() {
+        alert('test');
+    }
+
   async function addTodo() {
     try {
         if (!formState.name || !formState.description) return;
@@ -83,7 +87,11 @@ const App = () => {
 
  <>
     <div style={styles.container}>
-      <SideBar />
+      <SideBar rh1={{name: 'rick', description: 'art'}} overrides={{"Flex.Flex[0].Flex[0].Flex[0].Flex[1].Button[0]": { onClick:test, children:'pru' } }}/>
+
+      <h3>antes</h3>
+      <CardACollection />
+      <h3>desp</h3>
       <h2>Amplify Todos</h2>
             <input
                 onChange={event => setInput('name', event.target.value)}

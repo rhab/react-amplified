@@ -5,12 +5,11 @@
  **************************************************************************/
 
 import React from "react";
-import { Todo } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type CardAProps = React.PropsWithChildren<Partial<FlexProps> & {
-    pr1?: Todo;
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type ProfileACollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function CardA(props: CardAProps): React.ReactElement;
+export default function ProfileACollection(props: ProfileACollectionProps): React.ReactElement;

@@ -9,7 +9,7 @@ import React from "react";
 import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Flex, Image, Text } from "@aws-amplify/ui-react";
 export default function CardA(props) {
-  const { overrides: overridesProp, ...rest } = props;
+  const { pr1, overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
   return (
     <Flex
@@ -56,7 +56,7 @@ export default function CardA(props) {
           alignSelf="stretch"
           position="relative"
           padding="0px 0px 0px 0px"
-          children="Classic Long Sleeve T-Shirt"
+          children={pr1?.name}
           {...getOverrideProps(overrides, "Flex.Flex[0].Text[0]")}
         ></Text>
         <Text
