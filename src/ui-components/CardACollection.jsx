@@ -12,16 +12,19 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import CardA from "./CardA";
 import { Collection } from "@aws-amplify/ui-react";
+import { SortDirection } from "@aws-amplify/datastore";
 import { Todo } from "../models";
 export default function CardACollection(props) {
   const { items: itemsProp, overrides: overridesProp, ...rest } = props;
   const overrides = { ...overridesProp };
+  const itemsPagination = { sort: (s) => s.name(SortDirection.ASCENDING) };
   const items =
     itemsProp !== undefined
       ? itemsProp
       : useDataStoreBinding({
           type: "collection",
           model: Todo,
+          pagination: itemsPagination,
         }).items;
   return (
     <Collection

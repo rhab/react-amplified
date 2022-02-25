@@ -90,7 +90,7 @@ const App = () => {
       <SideBar rh1={{name: 'rick', description: 'art'}} overrides={{"Flex.Flex[0].Flex[0].Flex[0].Flex[1].Button[0]": { onClick:test, children:'pru' } }}/>
 
       <h3>antes</h3>
-      <CardACollection />
+      <CardACollection isPaginated itemsPerPage={3}/>
       <h3>desp</h3>
       <h2>Amplify Todos</h2>
             <input
